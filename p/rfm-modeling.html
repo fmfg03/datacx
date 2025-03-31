@@ -5,7 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RFM Modeling in Marketing: The Complete Guide | DataCX.ai</title>
     <meta name="description" content="Comprehensive guide to RFM (Recency, Frequency, Monetary) modeling for customer segmentation and marketing strategy optimization.">
+
+    <!-- Add this to the <head> section of your HTML -->
+<link rel="stylesheet" href="/css/main.css">
+
+<!-- Optional: Add this right before the closing </body> tag for responsive navigation -->
+<script>
+  // Simple responsive navigation toggle
+  document.addEventListener('DOMContentLoaded', function() {
+    const navToggle = document.createElement('button');
+    navToggle.classList.add('nav-toggle');
+    navToggle.innerHTML = '☰';
+    navToggle.style.display = 'none';
     
+    const nav = document.querySelector('nav ul') || document.querySelector('ul'); // Find navigation
+    
+    if (nav) {
+      // Only set up toggle for smaller screens
+      if (window.innerWidth < 768) {
+        navToggle.style.display = 'block';
+        nav.style.display = 'none';
+        
+        // Insert toggle before navigation
+        nav.parentNode.insertBefore(navToggle, nav);
+        
+        // Toggle navigation on click
+        navToggle.addEventListener('click', function() {
+          if (nav.style.display === 'none') {
+            nav.style.display = 'block';
+          } else {
+            nav.style.display = 'none';
+          }
+        });
+      }
+    }
+  });
+</script>
     <!-- Organization Schema -->
     <script type="application/ld+json">
     {
