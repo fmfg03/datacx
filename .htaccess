@@ -5,6 +5,10 @@ RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
+# Update the HTTPS redirect to handle all subpages properly
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
 # Force non-www
 RewriteCond %{HTTP_HOST} ^www\.datacx\.ai [NC]
 RewriteRule ^(.*)$ https://datacx.ai/$1 [L,R=301]
