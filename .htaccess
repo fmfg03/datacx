@@ -5,6 +5,11 @@ RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
+# Add this to ensure old HTTP links are properly handled
+RewriteCond %{HTTP_HOST} ^datacx\.ai [NC]
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://datacx.ai/$1 [R=301,L]
+
 # Update the HTTPS redirect to handle all subpages properly
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
