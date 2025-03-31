@@ -1,75 +1,41 @@
 # Enable Rewrite Engine
 RewriteEngine On
-# Enable compression
-<IfModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript application/x-javascript application/json
-</IfModule>
 
-# Set browser caching
-<IfModule mod_expires.c>
-  ExpiresActive On
-  ExpiresByType image/jpg "access plus 1 year"
-  ExpiresByType image/jpeg "access plus 1 year"
-  ExpiresByType image/gif "access plus 1 year"
-  ExpiresByType image/png "access plus 1 year"
-  ExpiresByType image/svg+xml "access plus 1 year"
-  ExpiresByType text/css "access plus 1 month"
-  ExpiresByType application/javascript "access plus 1 month"
-  ExpiresByType text/html "access plus 1 week"
-</IfModule>
+# ---- REDIRECT RULES (ordered by priority) ----
 
-# Force HTTPS and non-www (combined rule)
-RewriteEngine On
-
-# First force HTTPS
+# 1. Force HTTPS for all traffic
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# Then force non-www (IMPORTANT: this needs to happen AFTER the HTTPS redirect)
+# 2. Force non-www (after HTTPS is handled)
 RewriteCond %{HTTP_HOST} ^www\.datacx\.ai [NC]
 RewriteRule ^(.*)$ https://datacx.ai/$1 [L,R=301]
 
-# Force HTTPS
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
-# Add this to ensure old HTTP links are properly handled
-RewriteCond %{HTTP_HOST} ^datacx\.ai [NC]
-RewriteCond %{SERVER_PORT} 80
-RewriteRule ^(.*)$ https://datacx.ai/$1 [R=301,L]
-
-# Update the HTTPS redirect to handle all subpages properly
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
-# Force non-www
-RewriteCond %{HTTP_HOST} ^www\.datacx\.ai [NC]
-RewriteRule ^(.*)$ https://datacx.ai/$1 [L,R=301]
-
-# Redirect index.php to root
+# 3. Redirect index.php/index.html to root
 RewriteCond %{THE_REQUEST} ^GET\ /index\.(php|html)\ HTTP
 RewriteRule ^index\.(php|html)$ / [R=301,L]
 
-# Remove trailing slash from non-directory URLs
+# 4. Remove trailing slash from non-directory URLs
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)/$ /$1 [R=301,L]
 
-# Add trailing slash to directory URLs
+# 5. Add trailing slash to directory URLs
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteCond %{REQUEST_URI} !/$
 RewriteRule ^(.*)$ $1/ [R=301,L]
 
-# Key redirects to ensure we don't lose authority from backlinks
-# Preserve the critical path cited by Wikipedia
+# 6. Preserve the critical path cited by Wikipedia
 RewriteCond %{REQUEST_URI} !^/p/rfm-modeling
 RewriteRule ^rfm-modeling/?$ /p/rfm-modeling [R=301,L]
 
-# Prevent duplicate content
+# 7. Prevent duplicate content
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.html [NC]
 RewriteRule ^ %1 [R=301,L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+# ---- PERFORMANCE OPTIMIZATIONS ----
 
 # Set default character set
 AddDefaultCharset UTF-8
@@ -96,6 +62,8 @@ AddType image/svg+xml .svg
   ExpiresByType application/javascript "access plus 1 month"
   ExpiresByType text/html "access plus 1 week"
 </IfModule>
+
+# ---- SECURITY SETTINGS ----
 
 # Prevent directory browsing
 Options -Indexes
