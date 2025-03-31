@@ -6,7 +6,7 @@
     <title>DataCX.ai | Enterprise Customer Data Analytics Platform</title>
     <meta name="description" content="Transform your customer data into actionable insights with DataCX.ai. Advanced RFM modeling, customer segmentation, and AI-powered analytics for enterprise businesses.">
     
-    <!-- Schema markup for organization -->
+    <!-- Organization Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -14,11 +14,42 @@
       "name": "DataCX.ai",
       "url": "https://datacx.ai",
       "logo": "https://datacx.ai/images/logo.png",
-      "description": "Enterprise customer data analytics and RFM modeling platform",
+      "description": "Enterprise customer data analytics and RFM modeling platform. AI-powered customer experience optimization.",
       "sameAs": [
         "https://twitter.com/datacxai",
         "https://linkedin.com/company/datacxai"
-      ]
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Data Lane",
+        "addressLocality": "Analytics City",
+        "addressRegion": "CA",
+        "postalCode": "94105",
+        "addressCountry": "US"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-555-123-4567",
+        "contactType": "customer service",
+        "email": "contact@datacx.ai",
+        "availableLanguage": ["English", "Spanish"]
+      }
+    }
+    </script>
+    
+    <!-- Website Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "url": "https://datacx.ai/",
+      "name": "DataCX.ai",
+      "description": "Enterprise customer data analytics and RFM modeling platform",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://datacx.ai/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
     }
     </script>
     
