@@ -1,5 +1,9 @@
 User-agent: *
 Allow: /
+
+# Critical paths cited by Wikipedia
+Allow: /p/rfm-modeling
+Allow: /
 Allow: /p/rfm-modeling
 Allow: /solutions/
 Allow: /resources/
