@@ -18,6 +18,17 @@ RewriteEngine On
   ExpiresByType text/html "access plus 1 week"
 </IfModule>
 
+# Force HTTPS and non-www (combined rule)
+RewriteEngine On
+
+# First force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Then force non-www (IMPORTANT: this needs to happen AFTER the HTTPS redirect)
+RewriteCond %{HTTP_HOST} ^www\.datacx\.ai [NC]
+RewriteRule ^(.*)$ https://datacx.ai/$1 [L,R=301]
+
 # Force HTTPS
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
