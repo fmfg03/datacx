@@ -18,22 +18,7 @@
       "sameAs": [
         "https://twitter.com/datacxai",
         "https://linkedin.com/company/datacxai"
-      ],
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "123 Data Lane",
-        "addressLocality": "Analytics City",
-        "addressRegion": "CA",
-        "postalCode": "94105",
-        "addressCountry": "US"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+1-555-123-4567",
-        "contactType": "customer service",
-        "email": "contact@datacx.ai",
-        "availableLanguage": ["English", "Spanish"]
-      }
+      ]
     }
     </script>
     
@@ -53,23 +38,51 @@
     }
     </script>
     
-    <!-- Additional meta tags -->
-    <meta property="og:title" content="DataCX.ai | Enterprise Customer Data Analytics Platform">
-    <meta property="og:description" content="Transform your customer data into actionable insights with advanced RFM modeling, customer segmentation, and AI-powered analytics.">
-    <meta property="og:image" content="https://datacx.ai/images/og-image.jpg">
-    <meta property="og:url" content="https://datacx.ai">
-    <meta name="twitter:card" content="summary_large_image">
-    
-    <!-- Styles would go here -->
-    <link rel="stylesheet" href="/styles/main.css">
+    <!-- Canonical URL -->
     <link rel="canonical" href="https://datacx.ai/">
+    
+    <!-- Basic styling -->
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        ul {
+            list-style-type: disc;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .cta {
+            margin: 20px 0;
+        }
+        .cta a {
+            margin-right: 15px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .solution {
+            margin-bottom: 30px;
+        }
+    </style>
 </head>
 <body>
     <header>
+        <h1><a href="/">DataCX.ai</a></h1>
         <nav>
-            <div class="logo">
-                <a href="/">DataCX.ai</a>
-            </div>
             <ul>
                 <li><a href="/solutions">Solutions</a></li>
                 <li><a href="/resources">Resources</a></li>
@@ -81,262 +94,55 @@
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h1>Transform Customer Data Into Strategic Advantage</h1>
-                    <p>Enterprise-grade customer analytics platform powered by advanced RFM modeling and AI to optimize segmentation, personalization, and lifetime value.</p>
-                    <div class="hero-cta">
-                        <a href="/solutions" class="btn primary">Explore Solutions</a>
-                        <a href="/contact" class="btn secondary">Schedule Demo</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <img src="/images/dashboard-preview.jpg" alt="DataCX.ai Analytics Dashboard" loading="lazy">
-                </div>
+        <section>
+            <h2>Transform Customer Data Into Strategic Advantage</h2>
+            <p>Enterprise-grade customer analytics platform powered by advanced RFM modeling and AI to optimize segmentation, personalization, and lifetime value.</p>
+            
+            <div class="cta">
+                <a href="/solutions">Explore Solutions</a>
+                <a href="/contact">Schedule Demo</a>
+            </div>
+            
+            <div class="dashboard-image">
+                <img src="/images/dashboard.jpg" alt="DataCX.ai Analytics Dashboard">
             </div>
         </section>
-
-        <!-- Key Solutions Section -->
-        <section class="solutions">
-            <div class="container">
-                <h2>Enterprise Data Analytics Solutions</h2>
-                <div class="solutions-grid">
-                    <div class="solution-card">
-                        <div class="solution-icon">
-                            <img src="/images/icons/rfm-model.svg" alt="RFM Modeling Icon" loading="lazy">
-                        </div>
-                        <h3>Advanced RFM Modeling</h3>
-                        <p>Segment customers based on Recency, Frequency, and Monetary value to identify high-value segments and optimize marketing strategies.</p>
-                        <a href="/p/rfm-modeling" class="solution-link">Learn More →</a>
-                    </div>
-                    
-                    <div class="solution-card">
-                        <div class="solution-icon">
-                            <img src="/images/icons/predictive.svg" alt="Predictive Analytics Icon" loading="lazy">
-                        </div>
-                        <h3>Predictive Analytics</h3>
-                        <p>Forecast customer behavior, identify churn risks, and discover opportunities for cross-selling and upselling with AI-powered predictions.</p>
-                        <a href="/solutions/predictive-analytics" class="solution-link">Learn More →</a>
-                    </div>
-                    
-                    <div class="solution-card">
-                        <div class="solution-icon">
-                            <img src="/images/icons/integration.svg" alt="Integration Icon" loading="lazy">
-                        </div>
-                        <h3>Seamless Data Integration</h3>
-                        <p>Connect all your customer data sources including CRM, e-commerce platforms, and marketing tools for comprehensive analysis.</p>
-                        <a href="/solutions/data-integration" class="solution-link">Learn More →</a>
-                    </div>
-                    
-                    <div class="solution-card">
-                        <div class="solution-icon">
-                            <img src="/images/icons/actionable.svg" alt="Actionable Insights Icon" loading="lazy">
-                        </div>
-                        <h3>Actionable Insights</h3>
-                        <p>Convert complex customer data into clear, actionable strategies for marketing, product development, and customer experience.</p>
-                        <a href="/solutions/actionable-insights" class="solution-link">Learn More →</a>
-                    </div>
-                </div>
+        
+        <section>
+            <h2>Enterprise Data Analytics Solutions</h2>
+            
+            <div class="solution">
+                <img src="/images/icons/rfm-modeling.svg" alt="RFM Modeling Icon">
+                <h3>Advanced RFM Modeling</h3>
+                <p>Segment customers based on Recency, Frequency, and Monetary value to identify high-value segments and optimize marketing strategies.</p>
+                <a href="/p/rfm-modeling">Learn More →</a>
             </div>
-        </section>
-
-        <!-- Case Studies Section -->
-        <section class="case-studies">
-            <div class="container">
-                <h2>Success Stories</h2>
-                <div class="case-studies-grid">
-                    <div class="case-study-card">
-                        <div class="case-study-img">
-                            <img src="/images/case-studies/ecommerce.jpg" alt="E-commerce Case Study" loading="lazy">
-                        </div>
-                        <div class="case-study-content">
-                            <span class="case-study-category">E-commerce</span>
-                            <h3>How Fashion Retailer Increased Customer Retention by 42%</h3>
-                            <p>Using advanced RFM modeling to identify at-risk customers and implement targeted retention strategies.</p>
-                            <a href="/case-studies/ecommerce/fashion-retailer" class="case-study-link">Read Case Study →</a>
-                        </div>
-                    </div>
-                    
-                    <div class="case-study-card">
-                        <div class="case-study-img">
-                            <img src="/images/case-studies/subscription.jpg" alt="Subscription Case Study" loading="lazy">
-                        </div>
-                        <div class="case-study-content">
-                            <span class="case-study-category">Subscription</span>
-                            <h3>Reducing Churn by 38% for SaaS Platform</h3>
-                            <p>Predictive analytics implementation that identified churn signals before customers canceled.</p>
-                            <a href="/case-studies/subscription/saas-platform" class="case-study-link">Read Case Study →</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="case-studies-cta">
-                    <a href="/case-studies" class="btn secondary">View All Case Studies</a>
-                </div>
+            
+            <div class="solution">
+                <img src="/images/icons/predictive.svg" alt="Predictive Analytics Icon">
+                <h3>Predictive Analytics</h3>
+                <p>Forecast customer behavior, identify churn risks, and discover opportunities for cross-selling and upselling with AI-powered predictions.</p>
+                <a href="/solutions/predictive-analytics">Learn More →</a>
             </div>
-        </section>
-
-        <!-- Resources Section -->
-        <section class="resources">
-            <div class="container">
-                <h2>Knowledge Center</h2>
-                <div class="resources-grid">
-                    <div class="resource-card featured">
-                        <div class="resource-content">
-                            <span class="resource-type">Featured Guide</span>
-                            <h3>What is RFM Modeling in Marketing?</h3>
-                            <p>A comprehensive guide to RFM modeling, its implementation, and how it can transform your marketing strategy.</p>
-                            <a href="/p/rfm-modeling" class="resource-link">Read the Guide →</a>
-                        </div>
-                    </div>
-                    
-                    <div class="resource-card">
-                        <div class="resource-content">
-                            <span class="resource-type">Whitepaper</span>
-                            <h3>The Future of Customer Data Analytics</h3>
-                            <a href="/resources/future-customer-data-analytics" class="resource-link">Download →</a>
-                        </div>
-                    </div>
-                    
-                    <div class="resource-card">
-                        <div class="resource-content">
-                            <span class="resource-type">Article</span>
-                            <h3>Customer Lifetime Value Optimization</h3>
-                            <a href="/resources/customer-lifetime-value" class="resource-link">Read More →</a>
-                        </div>
-                    </div>
-                    
-                    <div class="resource-card">
-                        <div class="resource-content">
-                            <span class="resource-type">Webinar</span>
-                            <h3>Predictive Analytics for Retail</h3>
-                            <a href="/resources/predictive-analytics-retail" class="resource-link">Watch Now →</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="resources-cta">
-                    <a href="/resources" class="btn secondary">Browse All Resources</a>
-                </div>
+            
+            <div class="solution">
+                <img src="/images/icons/integration.svg" alt="Integration Icon">
+                <h3>Seamless Data Integration</h3>
+                <p>Connect all your customer data sources including CRM, e-commerce platforms, and marketing tools for comprehensive analysis.</p>
+                <a href="/solutions/data-integration">Learn More →</a>
             </div>
-        </section>
-
-        <!-- Testimonials Section -->
-        <section class="testimonials">
-            <div class="container">
-                <h2>What Our Clients Say</h2>
-                <div class="testimonials-slider">
-                    <div class="testimonial">
-                        <div class="testimonial-content">
-                            <p>"DataCX.ai has transformed how we understand our customers. The RFM modeling implementation allowed us to identify our most valuable segments and significantly improve our marketing ROI."</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <img src="/images/testimonials/sarah-johnson.jpg" alt="Sarah Johnson" loading="lazy">
-                            <div class="author-info">
-                                <strong>Sarah Johnson</strong>
-                                <span>Marketing Director, TechRetail Inc.</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="testimonial">
-                        <div class="testimonial-content">
-                            <p>"The predictive analytics capabilities have been game-changing for our subscription business. We can now identify at-risk customers before they churn and take proactive measures."</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <img src="/images/testimonials/michael-chen.jpg" alt="Michael Chen" loading="lazy">
-                            <div class="author-info">
-                                <strong>Michael Chen</strong>
-                                <span>CEO, SubscriptionBox Pro</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTAs Section -->
-        <section class="cta-section">
-            <div class="container">
-                <div class="cta-grid">
-                    <div class="cta-card">
-                        <h3>Ready to Transform Your Customer Data?</h3>
-                        <p>Schedule a personalized demo to see how DataCX.ai can optimize your customer analytics strategy.</p>
-                        <a href="/contact" class="btn primary">Request Demo</a>
-                    </div>
-                    
-                    <div class="cta-card">
-                        <h3>Looking for Specific Solutions?</h3>
-                        <p>Explore our enterprise solutions designed for businesses of all sizes and industries.</p>
-                        <a href="/solutions" class="btn secondary">View Solutions</a>
-                    </div>
-                </div>
+            
+            <div class="solution">
+                <img src="/images/icons/actionable.svg" alt="Actionable Insights Icon">
+                <h3>Actionable Insights</h3>
+                <p>Convert complex customer data into clear, actionable strategies for marketing, product development, and customer experience.</p>
+                <a href="/solutions/actionable-insights">Learn More →</a>
             </div>
         </section>
     </main>
 
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <a href="/">DataCX.ai</a>
-                    <p>Enterprise Customer Data Analytics</p>
-                </div>
-                
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4>Solutions</h4>
-                        <ul>
-                            <li><a href="/solutions/segmentation">Customer Segmentation</a></li>
-                            <li><a href="/solutions/predictive-analytics">Predictive Analytics</a></li>
-                            <li><a href="/solutions/data-integration">Data Integration</a></li>
-                            <li><a href="/solutions/enterprise">Enterprise Solutions</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-column">
-                        <h4>Resources</h4>
-                        <ul>
-                            <li><a href="/p/rfm-modeling">RFM Modeling Guide</a></li>
-                            <li><a href="/resources">Resource Library</a></li>
-                            <li><a href="/blog">Blog</a></li>
-                            <li><a href="/case-studies">Case Studies</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-column">
-                        <h4>Company</h4>
-                        <ul>
-                            <li><a href="/about">About Us</a></li>
-                            <li><a href="/contact">Contact</a></li>
-                            <li><a href="/about/careers">Careers</a></li>
-                            <li><a href="https://agentius.ai" target="_blank">Agentius Network</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <div class="social-links">
-                    <a href="https://twitter.com/datacxai" target="_blank" aria-label="Twitter">
-                        <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
-                    </a>
-                    <a href="https://linkedin.com/company/datacxai" target="_blank" aria-label="LinkedIn">
-                        <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/></svg>
-                    </a>
-                </div>
-                
-                <div class="legal-links">
-                    <a href="/privacy-policy">Privacy Policy</a>
-                    <a href="/terms-of-service">Terms of Service</a>
-                </div>
-                
-                <p class="copyright">&copy; 2024 DataCX.ai. All rights reserved.</p>
-            </div>
-        </div>
+        <p>&copy; 2024 DataCX.ai. All rights reserved.</p>
     </footer>
-
-    <!-- Scripts would go here -->
-    <script src="/js/main.js" defer></script>
 </body>
 </html>
