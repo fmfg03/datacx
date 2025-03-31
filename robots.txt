@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+Allow: /p/rfm-modeling
+Allow: /solutions/
+Allow: /resources/
+Allow: /case-studies/
+Allow: /blog/
+
+# Ensure crawlers can access CSS/JS/images
+Allow: /images/
+Allow: /js/
+Allow: /css/
+Allow: /fonts/
+Allow: /styles/
+
+# XML sitemaps
+Sitemap: https://datacx.ai/sitemap.xml
